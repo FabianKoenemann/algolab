@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eld/algolab/week3/firsthit/firsthit.cpp
+CGAL/Exact_predicates_exact_constructions_kernel.h
+-
+bits/stdc++.h
+-
+

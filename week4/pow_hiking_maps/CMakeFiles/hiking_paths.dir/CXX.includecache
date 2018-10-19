@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/eld/algolab/week4/pow_hiking_maps/hiking_paths.cpp
+bits/stdc++.h
+-
+CGAL/Exact_predicates_exact_constructions_kernel.h
+-
+
