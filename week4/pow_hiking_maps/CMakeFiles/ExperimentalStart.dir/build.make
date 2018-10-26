@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/eld/algolab/week4/pow_hiking_maps
+CMAKE_SOURCE_DIR = /home/eld/algolab/github/week4/pow_hiking_maps
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/eld/algolab/week4/pow_hiking_maps
+CMAKE_BINARY_DIR = /home/eld/algolab/github/week4/pow_hiking_maps
 
 # Utility rule file for ExperimentalStart.
 
@@ -71,6 +71,6 @@ CMakeFiles/ExperimentalStart.dir/clean:
 .PHONY : CMakeFiles/ExperimentalStart.dir/clean
 
 CMakeFiles/ExperimentalStart.dir/depend:
-	cd /home/eld/algolab/week4/pow_hiking_maps && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eld/algolab/week4/pow_hiking_maps /home/eld/algolab/week4/pow_hiking_maps /home/eld/algolab/week4/pow_hiking_maps /home/eld/algolab/week4/pow_hiking_maps /home/eld/algolab/week4/pow_hiking_maps/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/eld/algolab/github/week4/pow_hiking_maps && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/eld/algolab/github/week4/pow_hiking_maps /home/eld/algolab/github/week4/pow_hiking_maps /home/eld/algolab/github/week4/pow_hiking_maps /home/eld/algolab/github/week4/pow_hiking_maps /home/eld/algolab/github/week4/pow_hiking_maps/CMakeFiles/ExperimentalStart.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/ExperimentalStart.dir/depend
 

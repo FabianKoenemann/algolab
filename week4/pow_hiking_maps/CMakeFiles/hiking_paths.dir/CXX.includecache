@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/eld/algolab/week4/pow_hiking_maps/hiking_paths.cpp
+/home/eld/algolab/github/week4/pow_hiking_maps/hiking_paths.cpp
 bits/stdc++.h
 -
 CGAL/Exact_predicates_exact_constructions_kernel.h

@@ -6,5 +6,5 @@ CXX_FLAGS =   -frounding-math -std=gnu++14
 
 CXX_DEFINES = -DCGAL_USE_CORE=1 -DCGAL_USE_GMP -DCGAL_USE_MPFR
 
-CXX_INCLUDES = -I/home/eld/algolab/week4/pow_hiking_maps 
+CXX_INCLUDES = -I/home/eld/algolab/github/week4/pow_hiking_maps 
 

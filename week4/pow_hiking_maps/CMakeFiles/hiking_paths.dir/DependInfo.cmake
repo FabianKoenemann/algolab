@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/eld/algolab/week4/pow_hiking_maps/hiking_paths.cpp" "/home/eld/algolab/week4/pow_hiking_maps/CMakeFiles/hiking_paths.dir/hiking_paths.cpp.o"
+  "/home/eld/algolab/github/week4/pow_hiking_maps/hiking_paths.cpp" "/home/eld/algolab/github/week4/pow_hiking_maps/CMakeFiles/hiking_paths.dir/hiking_paths.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

@@ -11,10 +11,7 @@ typedef K::Line_2 L;
 typedef K::Triangle_2 T;
 
 typedef vector<P> pvec;
-typedef vector<T> tvec;
-typedef vector<L> lvec;
-typedef vector<pair<P, P>> ppvec;
-//typedef list<pair<P, P>> ppvec;
+typedef array<L, 3> lvec;
 
 typedef vector<int> vec;
 typedef vector<vec> vvec;
@@ -30,51 +27,37 @@ void test_case() {
         cin >> x >> y;
         p.push_back(P(x, y));
     }
-    ppvec pp;
-    //pp.reserve(m-1);
-    for (int i = 0; i < m - 1; ++i) {
-        pp.push_back(make_pair(p[i], p[i+1]));
-    }
-    //random_shuffle(pp.begin(), pp.end());
 
-    //tvec t;
-    //t.reserve(n);
     vvec c(m-1, vec());
-    int start = 0;
     for (int i = 0; i < n; ++i) {
         lvec l;
-        l.reserve(3);
+        array<P, 3> p1;
         for (int j = 0; j < 3; ++j) {
             int x1, y1, x2, y2;
             cin >> x1 >> y1 >> x2 >> y2;
-            l.push_back(L(P(x1, y1), P(x2, y2)));
+            p1[j] = P(x1, y1);
+            l[j] = L(p1[j], P(x2, y2));
         }
-        pvec trp;
-        trp.reserve(3);
+        array<bool, 3> ori;
         for (int j = 0; j < 3; ++j) {
-            for (int k = j + 1; k < 3; ++k) {
-                auto o = intersection(l[j], l[k]);
-                const P* op = boost::get<P>(&*o);
-                trp.push_back(*op);
+            int other = (j+1) % 3;
+            ori[j] = l[j].has_on_positive_side(p1[other]);
+        }
+        int prev = m + 1;
+        for (int j = 0; j < m; ++j) {
+            bool in = true;
+            for (int k = 0; k < 3; ++k) {
+                if (l[k].has_on_positive_side(p[j]) != ori[k]) {
+                    in = false;
+                    break;
+                }
+            }
+            if (in) {
+                if (prev == j-1)
+                    c[j-1].push_back(i);
+                prev = j;
             }
         }
-        //t.push_back(T(trp[0], trp[1], trp[2]));
-        T t(trp[0], trp[1], trp[2]);
-        auto it = pp.begin();
-        //stack<ppvec::iterator> s;
-        for (; it != pp.end(); ++it) {
-            if (t.has_on_unbounded_side(it->first)) continue;
-            if (t.has_on_unbounded_side(it->second)) continue;
-            c[distance(pp.begin(), it)].push_back(i);
-            //s.push(it);
-            //start = j;
-        }
-        /*
-        while (!s.empty()) {
-            pp.erase(s.top());
-            s.pop();
-        }
-        */
     }
 
     // basically search snippets algorithm

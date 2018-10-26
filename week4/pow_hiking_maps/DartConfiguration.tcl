@@ -4,8 +4,8 @@
 
 
 # Configuration directories and files
-SourceDirectory: /home/eld/algolab/week4/pow_hiking_maps
-BuildDirectory: /home/eld/algolab/week4/pow_hiking_maps
+SourceDirectory: /home/eld/algolab/github/week4/pow_hiking_maps
+BuildDirectory: /home/eld/algolab/github/week4/pow_hiking_maps
 
 # Where to place the cost data store
 CostDataFile: 
@@ -36,7 +36,7 @@ ScpCommand: /bin/scp
 NightlyStartTime: 00:00:00 EDT
 
 # Commands for the build/test/submit cycle
-ConfigureCommand: "/usr/bin/cmake" "/home/eld/algolab/week4/pow_hiking_maps"
+ConfigureCommand: "/usr/bin/cmake" "/home/eld/algolab/github/week4/pow_hiking_maps"
 MakeCommand: /usr/bin/cmake --build . --config "${CTEST_CONFIGURATION_TYPE}" -- -i
 DefaultCTestConfigurationType: Release
 
